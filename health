@@ -1,0 +1,90 @@
+
+
+
+def getdate():
+    import datetime
+    return datetime.datetime .now()
+
+def gettime():
+    import datetime
+    return datetime.datetime.now()
+
+
+def take (k):
+        c = int(input("1 for ex. and 2 for food"))
+        if (c==1):
+            value=input("type here \n ")
+            with open("sonu-ex.txt" , "a") as op:
+                op.write (str([str(gettime())]) + ": " + value + " \n ")
+            print(" successfully written")
+        elif (c==2):
+            value = input("type here \n ")
+            with open("sonu-food.txt" , "a") as op:
+
+               op.write (str([str(gettime())]) + ":" + value + " \n ")
+            print(" successfully written")
+        elif k==2:
+               c = int(input("1 for ex. and 2 for food"))
+        if c == 1:
+            value = input("type here \n ")
+            with open("harrysir-ex.txt" , "a") as op:
+
+                op.write (str([str(gettime())]) + ":" + value + " \n ")
+            print(" successfully written")
+        elif c == 2:
+            value = input("type here \n ")
+            with open("harrysir-food.txt" ,"a") as op:
+
+
+                op.write (str([str(gettime())]) + ":" + value + " \n ")
+            print(" successfully written")
+
+        else:
+             print("plz enter the correct name ")
+
+
+def retrieve (k):
+    if k==1:
+        c = int(input("1 for ex. and 2 for food"))
+        if c == 1:
+
+             with open("sonu-ex.txt") as op:
+                  for i in op:
+                             print(i)
+        elif c == 2:
+
+             with open("sonu-food.txt") as op:
+
+                   for i in op:
+                                     print(i)
+    elif  (k == 2):
+          c = int(input("1 for ex. and 2 for food"))
+          if c == 1:
+
+               with open("harrysir-ex.txt") as op:
+
+                 for i in op:
+                     print(i)
+
+
+
+
+          elif c == 2:
+
+                 with open("harrysir-food.txt") as op:
+
+                      for i in op:
+                             print(i)
+
+    else:
+       print("plz enter the correct name ")
+
+print("health mangment system ")
+a = int(input(" press 1 for log and press 2 for retreive 1"))
+if a == 1:
+    b = int(input("1 for sonu and 2 for  harrysir "))
+    take(b)
+else:
+    b = int(input(" 1 for sonu and  2 for harrysir"))
+    retrieve(b)
+
